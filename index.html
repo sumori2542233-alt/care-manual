@@ -69,6 +69,9 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cover-main img{width:100%;height:100%;object-fit:cover;object-position:58% 50%;transform:scale(1.03)}
 .cover-sub{position:absolute;right:max(28px,calc(env(safe-area-inset-right,0px) + 12px));bottom:0;width:38%;max-width:240px;aspect-ratio:1;margin:0;overflow:hidden;border:5px solid var(--bg);border-radius:16px;box-shadow:0 10px 26px rgba(58,47,39,.18)}
 .cover-sub img{width:100%;height:100%;object-fit:cover}
+.cover-illust{margin:0;border-radius:18px;overflow:hidden;background:#fff;box-shadow:inset 0 0 0 1px var(--line)}
+.cover-illust img{display:block;width:100%;height:auto}
+.cover-stage:has(.cover-illust){padding-bottom:6px}
 .cover-title{display:flex;flex-direction:column;align-items:flex-start;gap:4px;padding-block:10px 10px}
 .cover-label{display:flex;align-items:center;gap:8px;font-family:var(--font-display);font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--wood)}
 .cover-label::before{content:"";width:18px;height:2px;border-radius:2px;background:var(--wood)}
@@ -79,7 +82,7 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .cover-btn{margin-top:14px;display:inline-flex;align-items:center;gap:8px;border:0;cursor:pointer;font:inherit;font-family:var(--font-display);font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;background:var(--blue);color:var(--on-blue)}
 .cover-btn svg{width:18px;height:18px}
 @media (prefers-reduced-motion:no-preference){
-  .cover-main{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+  .cover-main,.cover-illust{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
   .cover-sub{animation:rise .9s .2s cubic-bezier(.2,.7,.2,1) both}
   .cover-title{animation:fade 1s .3s ease both}
 }
@@ -218,8 +221,7 @@ button:focus-visible{outline:3px solid var(--leaf);outline-offset:2px}
 <main id="top">
 <header class="cover">
   <div class="cover-stage wrap">
-    <figure class="cover-main"><img src="img/p03-a.jpg" alt="" width="1000" height="651" loading="lazy" decoding="async"></figure>
-    <figure class="cover-sub"><img src="img/cover-sub.jpg" alt="" width="600" height="600" loading="lazy" decoding="async"></figure>
+    <figure class="cover-illust"><img src="img/cover-illust.jpg" alt="" width="1200" height="697" loading="lazy" decoding="async"></figure>
   </div>
   <div class="cover-title wrap">
     <h1><span class="cover-lead">永く快適に住むための</span><span class="cover-main-t">お手入れマニュアル</span></h1>
